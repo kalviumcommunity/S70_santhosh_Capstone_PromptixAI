@@ -12,32 +12,32 @@ PromptixAI solves this by offering:  A user-friendly platform to generate AI-pow
 4. File upload & management, enabling users to store and showcase their AI-generated images.
 With PromptixAI, users can explore AI creativity, generate high-quality visuals, and build their own AI-powered art gallery.
 
- 2. Tech Stack
+2. Tech Stack
 Category
 Technology Used
- Frontend:
+Frontend:
 React.js, Tailwind CSS, Vite
- Backend:
+Backend:
 Node.js, Express.js
- Database:
+Database:
 MongoDB, Mongoose
 Authentication:
 Firebase, JWT
- AI Features:
+AI Features:
 OpenAI API (DALL·E), LangChain
- File Upload:
+File Upload:
 Multer, Cloudinary
- Payments:
+Payments:
 Stripe API
- Testing:
+Testing:
 Jest
- Deployment:
+Deployment:
 Docker, Vercel, DigitalOcean
 
 
 🗓 3. Weekly Development Plan
- Week 1-2: Project Setup & Core Features
- Project Initialization
+Week 1-2: Project Setup & Core Features
+Project Initialization
 Set up GitHub repository & create Figma wireframes.
 Initialize React frontend & Express backend.
 Implement JWT & Google OAuth authentication.
@@ -46,32 +46,30 @@ Implement text prompt input & API request to OpenAI.
 Display generated images with download & save options.
 Store generated images in the MongoDB database.
 
- Week 3-4: User Features & Monetization
- User Dashboard & Image Management
+Week 3-4: User Features & Monetization
+User Dashboard & Image Management
 Create user profile pages & image history.
 Implement image deletion & modification.
 Payments & Subscription Model
 Integrate Stripe API for purchasing image-generation credits.
 Implement credit deduction on each AI image request.
-
- Week 5-6: Advanced Features & Testing
- AI-Powered Enhancements
+Week 5-6: Advanced Features & Testing
+AI-Powered Enhancements
 Implement AI-based recommendations for prompt suggestions.
 Optimize image generation response time.
- File Upload & Showcase
+File Upload & Showcase
 Allow users to upload their own images for AI enhancements.
 Create a "Gallery" feature to showcase top AI-generated images.
- Testing & Deployment
+Testing & Deployment
 Implement unit tests (Jest) for APIs & frontend.
 Dockerize backend & frontend for scalable deployment.
 
- Week 7: Scaling, Optimization & Final Deployment
- User Testing & Bug Fixes
+Week 7: Scaling, Optimization & Final Deployment
+User Testing & Bug Fixes
 Conduct real-world user testing (5-10 users).
 Optimize frontend performance & backend API response.
- Open Source Contributions
 
- Final Deployment & Growth
+Final Deployment & Growth
 Deploy frontend on Vercel, backend on DigitalOcean.
 Target 20+ active users.
 
@@ -79,6 +77,6 @@ Target 20+ active users.
 
 
 Conclusion
-PrmptixAI is a showcase-worthy capstone project that demonstrates both Level 1 & Level 2 concepts, integrating full-stack AI technology with real-world user engagement. By combining React, Node.js, MongoDB, OpenAI, Firebase, and Stripe, it offers a scalable solution for AI-driven content generation. 
+PromptixAI is a showcase-worthy capstone project that demonstrates both Level 1 & Level 2 concepts, integrating full-stack AI technology with real-world user engagement. By combining React, Node.js, MongoDB, OpenAI, Firebase, and Stripe, it offers a scalable solution for AI-driven content generation. 
 
 
