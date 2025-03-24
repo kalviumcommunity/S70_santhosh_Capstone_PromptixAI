@@ -1,10 +1,10 @@
 import React from 'react'
 import {assets} from '../assets/assets'
 import { Link, useNavigate } from 'react-router-dom'
-import  {useState} from 'react'
+i
 
 function Navbar() {
-    const[user, setUser] = useState(null);
+   
     const navigate=useNavigate();
   return (  
     <div className='flex justify-between items-center py-4'> 
@@ -14,7 +14,7 @@ function Navbar() {
         {
         user?
         <div className='flex items-center gap-2 sm:gap-3'>
-            <button className='flex items-center gap-2 bg-blue-100 px-4 sm:px-6 py-1.5 sm;py-3 rounded-full hover:scale-105 transition-all duration-700'>
+            <button className='flex items-center gap-2 bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700'>
             <img src={assets.credit_star} alt="" className='w-5'/>
             <p className='text-x sm:text-sm font-medium text-grey-600'>credits left:50</p>
             </button>
