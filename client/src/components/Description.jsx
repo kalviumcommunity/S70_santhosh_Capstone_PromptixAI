@@ -5,7 +5,7 @@ import{motion} from 'framer-motion'
 function Description() {
     return (
       <motion.div className="flex flex-col items-center justify-center text-center md:text-left my-24 p-6 md:px-28"
-    initial={{opacity:0.2,y:100}}
+    initial={{opacity:0.2,y:110}}
     whileInView={{opacity:1,y:0}}
     transition={{duration:1}}
     viewport={{once:true}}>
