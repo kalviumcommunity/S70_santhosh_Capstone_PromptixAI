@@ -1,7 +1,7 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import { useState } from 'react'
-
+import {motion} from 'framer-motion'
 
 function Result() {
   const [image,setImage]=useState(assets.sample_img_1)
@@ -12,7 +12,12 @@ function Result() {
 
   }
   return (
-    <form  onSubmit={onSubmitHandler}className='flex flex-col items-center justify-center min-h-[90vh]'>
+    <motion.form  onSubmit={onSubmitHandler}className='flex flex-col items-center justify-center min-h-[90vh]'
+    initial={{opacity:0.2,y:100}}
+    whileInView={{opacity:1,y:0}}
+    transition={{duration:1}}
+    viewport={{once:true}}
+    >
     <div>
       <div className='relative'>
         <img src={assets.sample_img_1} alt='' className='max-w-sm rounded'/>
@@ -34,7 +39,7 @@ function Result() {
       <a href={image} download className='bg-zinc-900 px-10 py-3 rounded-full cursor-pointer'>Download</a>
     </div>
 }
-    </form>
+    </motion.form>
   )
 }
                         

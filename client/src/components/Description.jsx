@@ -1,25 +1,28 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import{motion} from 'framer-motion'
 
 function Description() {
     return (
-      <div className="flex flex-col items-center justify-center text-center md:text-left my-24 p-6 md:px-28">
+      <motion.div className="flex flex-col items-center justify-center text-center md:text-left my-24 p-6 md:px-28"
+    initial={{opacity:0.2,y:100}}
+    whileInView={{opacity:1,y:0}}
+    transition={{duration:1}}
+    viewport={{once:true}}>
         
-        {/* Centered Title & Subtitle */}
+       
         <div className="w-full md:w-3/4 text-center mb-10">
           <h1 className="text-3xl sm:text-4xl font-semibold">Create AI Images</h1>
           <p className="text-gray-500">Turn your imagination into visuals</p>
         </div>
   
-        {/* Image & Text Container */}
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 w-full">
           
-          {/* Left Side - Image */}
+     
           <div className="w-full md:w-1/2 flex justify-center">
             <img src={assets.sample_img_1} className="w-80 xl:w-96 rounded-lg shadow-lg" alt="AI-generated sample" />
           </div>
   
-          {/* Right Side - Text */}
           <div className="w-full md:w-1/2">
             <h2 className="text-2xl font-semibold mb-4">Introducing AI-powered Text-to-Image Generator</h2>
             <p className="text-gray-600 leading-relaxed">
@@ -31,7 +34,7 @@ function Description() {
           </div>
   
         </div>
-      </div>
+      </motion.div>
     );
   }
   

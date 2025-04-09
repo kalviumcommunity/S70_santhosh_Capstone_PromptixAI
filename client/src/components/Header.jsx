@@ -1,34 +1,77 @@
-import React from 'react'
+import React ,{useContext}from 'react'
 import {assets} from '../assets/assets'
 import {  useNavigate } from 'react-router-dom'
-function Header() {
+import {motion} from 'framer-motion'
+import { AppContext } from '../contexts/AppContext'
+const Header=()=> {
   const navigate=useNavigate();
+  const {user,setShowLogin}=useContext(AppContext)
+ 
+  const onClickHandler=()=>{
+    if(user){
+      navigate('/result')
+
+  }else
+    {
+      setShowLogin(true)
+    }
+  }
   return (
-    <div className='flex flex-col items-center justify-center my-20'>   
-      <div className='text-stone-500 text-center inline-flex gap-2 bg-white px-6 py-1 rounded-full border border-neutral-500'>
+    <motion.div className='flex flex-col items-center justify-center my-20'
+    initial={{opacity:0.2,y:100}}
+    whileInView={{opacity:1,y:0}}
+    transition={{duration:1}}
+    viewport={{once:true}}
+    >   
+      <motion.div className='text-stone-500 text-center inline-flex gap-2 bg-white px-6 py-1 rounded-full border border-neutral-500'
+      initial={{opacity:0,y:-20}}
+      animate={{opacity:1,y:0}}
+      transition={{delay:0.2,duration:0.8}}
+     >
         <p>
             Best Text to Image Generator
         </p>
         <img src={assets.star_icon} alt=''/>
-      </div>
+      </motion.div>
       <div >
    
      
-      <h1 className="text-4xl sm:text-7xl mx-auto mt-10 text-center max-w-[725px] leading-none">
+      <motion.h1 className="text-4xl sm:text-7xl mx-auto mt-10 text-center max-w-[725px] leading-none"
+       initial={{opacity:0}}
+       animate={{opacity:1}}
+       transition={{delay:0.4,duration:2}}>
   Turn text to <br />
   <span className="text-blue-600 -mt-3 inline-block">image</span>, in seconds.
-      </h1>
-      <p className='text-center max-w-xl mx-auto mt-5'>Unleash your creativity with AI.turn your imagination into visual art in seconds - just type and watch the magic happen.</p>
-      <button onClick={()=>navigate('/result')} className="sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full hover:scale-105 transition-all duration-700 mx-auto">
+      </motion.h1>
+      <motion.p className='text-center max-w-xl mx-auto mt-5'
+       initial={{opacity:0,y:20}}
+       animate={{opacity:1,y:0}}
+       transition={{delay:0.6,duration:0.8}}>Unleash your creativity with AI.turn your imagination into visual art in seconds - just type and watch the magic happen.</motion.p>
+      <motion.button onClick={onClickHandler} className="sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full hover:scale-105 transition-all duration-700 mx-auto"
+         initial={{opacity:0}}
+          animate={{opacity:1}}
+         whileHover={{scale:1.05}}
+          whileTap={{scale:0.95}}
+         transition={{default:{duration:0.5,type:'spring'},opacity:{duration:0.2,delay:0.8}}}
+         viewport={{once:true}}>
        Generate Images
       <img className="h-6" src={assets.star_group} alt="" />
-       </button>
-       <div className='flex flex-wrap justify-center gap-3 mt-16'>
-        {Array(6).fill().map((item,index)=>( <img className='rounded hover:scale-105 transition-all duaration-300  cursor-pointer max-sm:w-10' src={index%2==0? assets.sample_img_2:assets.sample_img_1} alt='' key={index} width={70}/>))}
+       </motion.button>
+       <motion.div className='flex flex-wrap justify-center gap-3 mt-16'
+       initial={{opacity:0}}
+       animate={{opacity:1}}
+       transition={{delay:1,duration:1}}>
+        {Array(6).fill().map((item,index)=>( <motion.img className='rounded hover:scale-105 transition-all duaration-300  cursor-pointer max-sm:w-10'
+        whileHover={{scale:1.05,duration:0.1}}
+        src={index%2==0? assets.sample_img_2:assets.sample_img_1} alt='' key={index} width={70}/>))}
        
-       </div>
+       </motion.div>
 
-        <p className='mt-2 text-neutral-600 text-center'>Generated images from Promptrix</p>
+        <motion.p className='mt-2 text-neutral-600 text-center'
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        transition={{delay:1.2,duration:0.8}}
+        >Generated images from Promptrix</motion.p>
       </div>
     
 
@@ -37,7 +80,7 @@ function Header() {
  
 
 
-    </div>
+    </motion.div>
   )
 }
 
