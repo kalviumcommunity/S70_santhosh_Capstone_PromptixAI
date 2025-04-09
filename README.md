@@ -80,3 +80,4 @@ Conclusion
 PromptixAI is a showcase-worthy capstone project that demonstrates both Level 1 & Level 2 concepts, integrating full-stack AI technology with real-world user engagement. By combining React, Node.js, MongoDB, OpenAI, Firebase, and Stripe, it offers a scalable solution for AI-driven content generation. 
 
 
+Frontend-Deployment-Link:-https://promptrixai.netlify.app/
