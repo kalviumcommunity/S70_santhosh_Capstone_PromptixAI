@@ -1,11 +1,11 @@
-import userModel from "../models/userModel";
+import userModel from "../models/userModel.js";
 import bcrypt from "bcrypt"
-import jwt from "jsonwebtoken "
+import jwt from "jsonwebtoken"
 const registerUser= async(req,res)=>{
     try{
         const {name , email ,password}=req.body;
         if(!name||!email||!password){
-            return res.json({success:false,message:"All feilds are mandatory"})
+            return res.json({success:false,message:"All fields are mandatory"})
         }
          const salt =await bcrypt.genSalt(10)
          const hashedPassword= await bcrypt.hash(password,salt)
@@ -22,6 +22,6 @@ const registerUser= async(req,res)=>{
          //JWT-end
     }catch(error){
          console.log(error)
-         res.json({succes:false,message:error.message})
+         res.json({success:false,message:error.message})
     }
 }
