@@ -4,6 +4,16 @@ const connectionDB=async()=>{
         console.log("Database connected")
 
     })
-    await mongoose.connect(`${process.env.MONGO_URI}/promptrix`)
+    await mongoose.connect(`${process.env.MONGO_URI}`)
 }
 export default connectionDB;
+
+
+
+
+
+
+
+
+
+
