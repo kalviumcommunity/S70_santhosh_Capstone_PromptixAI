@@ -103,4 +103,6 @@ Target 50+ active users.
  5. Conclusion
 PromptixAI is a showcase-worthy capstone project that demonstrates both Level 1 & Level 2 concepts, integrating full-stack AI technology with real-world user engagement. By combining React, Node.js, MongoDB, OpenAI, Firebase, and Stripe, it offers a scalable solution for AI-driven content generation. 
 
+Frontend deployment link-https://promptrixai.netlify.app/
+Backend deployment link- https://s70-santhosh-capstone-promptixai-1.onrender.com/
 
