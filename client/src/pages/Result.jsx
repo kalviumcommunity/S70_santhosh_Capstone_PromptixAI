@@ -40,6 +40,15 @@ function Result() {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
+      <div className='w-full flex justify-start mb-6'>
+        <button
+          onClick={() => navigate('/')}
+          className='flex items-center gap-2 text-sm font-medium text-black px-5 py-2 rounded-full border border-gray-300 bg-white shadow-sm hover:shadow-md hover:border-gray-400 transition-all duration-300 group'
+        >
+          <span className='transition-transform duration-300 group-hover:-translate-x-1 text-base'>&#8592;</span>
+          Back
+        </button>
+      </div>
       <div>
         <div className='relative'>
           <img src={image} alt='' className='max-w-sm rounded' />

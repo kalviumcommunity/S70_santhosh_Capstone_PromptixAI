@@ -29,7 +29,7 @@ const Header=()=> {
       transition={{delay:0.2,duration:0.8}}
      >
         <p>
-            Best Text to Image Generator
+           Text to Image Generator
         </p>
         <img src={assets.star_icon} alt=''/>
       </motion.div>
@@ -61,10 +61,16 @@ const Header=()=> {
        initial={{opacity:0}}
        animate={{opacity:1}}
        transition={{delay:1,duration:1}}>
-        {Array(6).fill().map((item,index)=>( <motion.img className='rounded hover:scale-105 transition-all duaration-300  cursor-pointer max-sm:w-10'
-        whileHover={{scale:1.05,duration:0.1}}
-        src={index%2==0? assets.sample_img_2:assets.sample_img_1} alt='' key={index} width={70}/>))}
-       
+        {[assets.sample_img_1, assets.sample_img_2, assets.sample_img_3, assets.sample_img_4, assets.sample_img_5, assets.sample_img_6].map((img, index) => (
+          <motion.img
+            className='rounded hover:scale-105 transition-all duration-300 cursor-pointer max-sm:w-10'
+            whileHover={{scale:1.05}}
+            src={img}
+            alt={`AI generated sample ${index + 1}`}
+            key={index}
+            width={70}
+          />
+        ))}
        </motion.div>
 
         <motion.p className='mt-2 text-neutral-600 text-center'

@@ -7,8 +7,15 @@ import star_icon from './star_icon.svg'
 import rating_star from './rating_star.svg'
 import sample_img_1 from './sample_img_1.png'
 import sample_img_2 from './sample_img_2.png'
+import sample_img_3 from './sample_img_3.png'
+import sample_img_4 from './sample_img_4.png'
+import sample_img_5 from './sample_img_5.png'
+import sample_img_6 from './sample_img_6.png'
 import profile_img_1 from './profile_img_1.png'
 import profile_img_2 from './profile_img_2.png'
+import profile_female_1 from './profile_female_1.png'
+import profile_male_1 from './profile_male_1.png'
+import profile_male_2 from './profile_male_2.png'
 import step_icon_1 from './step_icon_1.svg'
 import step_icon_2 from './step_icon_2.svg'
 import step_icon_3 from './step_icon_3.svg'
@@ -29,6 +36,10 @@ export const assets = {
     rating_star,
     sample_img_1,
     sample_img_2,
+    sample_img_3,
+    sample_img_4,
+    sample_img_5,
+    sample_img_6,
     email_icon,
     lock_icon,
     cross_icon,
@@ -57,25 +68,25 @@ export const stepsData = [
 
 export const testimonialsData = [
     {
-        image:profile_img_1,
-        name:'Donald Jackman',
-        role:'Graphic Designer',
-        stars:5,
-        text:`I've been using Promptrix for nearly two days, primarily content creation, and it has been incredibly user-friendly, making my work much easier.`
+        image: profile_female_1,
+        name: 'Sofia Martinez',
+        role: 'UI/UX Designer',
+        stars: 5,
+        text: `PromptixAI has completely changed how I prototype. I can generate stunning visuals from a single line of text in seconds — it saves me hours of work every single day.`
     },
     {
-        image:profile_img_2,
-        name:'Richard Nelson',
-        role:'Content Creator',
-        stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        image: profile_male_1,
+        name: 'James Carter',
+        role: 'Social Media Manager',
+        stars: 5,
+        text: `I use PromptixAI daily for creating eye-catching post visuals. The image quality is incredible and the credit system makes it super affordable for my workflow.`
     },
     {
-        image:profile_img_1,
-        name:'Donald Jackman',
-        role:' Graphic Designer',
-        stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        image: profile_male_2,
+        name: 'Liam O\'Brien',
+        role: 'Freelance Illustrator',
+        stars: 5,
+        text: `I was skeptical at first, but the results blew me away. PromptixAI understands creative prompts really well and the output is publication-ready.`
     },
 ]
 
